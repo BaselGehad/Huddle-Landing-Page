@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+body {
+  background-color: var(--violet);
+  font-family: sans-serif;
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+header {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+header div img {
+  width: 8rem;
+  margin-left: 2rem;
+}
+section {
+  height: calc(100vh - 4rem);
+}
+section div.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 53%;
+}
+section div.image img {
+  width: 90%;
+}
+section div.text {
+  margin: 1rem 0;
+}
+section div.text h2 {
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+  padding: 0.3rem;
+}
+section div.text p {
+  color: white;
+  text-align: center;
+  margin: 0.7rem;
+  line-height: 1.4;
+}
+section form {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+section form button {
+  padding: 0.5rem 5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  border: none;
+  color: var(--violet);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+section form button:hover {
+  background-color: var(--Soft-Magenta);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+section div.social {
+  margin: 1rem;
+}
+section div.social ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section div.social ul li i {
+  margin: 0.5rem 1rem;
+  font-size: 1.5rem;
+  color: white;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+section div.social ul li i:hover {
+  color: var(--Soft-Magenta);
+  cursor: pointer;
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+}
+@media screen and (min-width: 769px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  section {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 1.5fr 1fr;
+  }
+  section div.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  section div.content div.text h2,
+  section div.content div.text p {
+    text-align: start;
+  }
+  section div.content form {
+    justify-content: flex-start;
+  }
+  section div.content div.social {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
